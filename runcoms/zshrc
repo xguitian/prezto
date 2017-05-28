@@ -11,3 +11,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Unknown
+# if which ruby >/dev/null && which gem >/dev/null; then
+#   PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+# fi
+
+#brew
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+#minishift
+eval $(minishift oc-env)
+source <(oc completion zsh)
+# To force to not alias to something else (not needed anymore)
+# alias oc='nocorrect oc'
